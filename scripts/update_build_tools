@@ -1,0 +1,6 @@
+#!/bin/sh
+cwd=$pwd
+cd avalon_lib_build_engine
+git fetch && git checkout master && git pull
+cd $cwd
+

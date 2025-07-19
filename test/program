@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z "${MCU_TYPE}" ]; then
+echo "ERROR: MCU_TYPE variable must be set"
+exit 1;
+fi
+
+teensy_loader_cli -w -v --mcu=${MCU_TYPE} ./Test.hex
