@@ -1,3 +1,6 @@
 [submodule "sysPlatformBase"]
 	path = sysPlatformBase
 	url = git@github.com:Blackaddr/sysPlatformBase.git
+[submodule "scripts/avalon_lib_build_engine.TEENSY_MICROMOD"]
+	path = scripts/avalon_lib_build_engine.TEENSY_MICROMOD
+	url = git@github.com:Blackaddr/avalon_lib_build_engine.TEENSY_MICROMOD.git
