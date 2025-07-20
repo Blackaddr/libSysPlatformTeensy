@@ -1,9 +1,3 @@
 [submodule "sysPlatformBase"]
 	path = sysPlatformBase
 	url = git@github.com:Blackaddr/sysPlatformBase.git
-[submodule "scripts/avalon_lib_build_engine.RPI4B"]
-	path = scripts/avalon_lib_build_engine.RPI4B
-	url = git@github.com:Blackaddr/avalon_app_build_engine.rpi4b.git
-[submodule "scripts/avalon_lib_build_engine.TEENSY_MICROMOD"]
-	path = scripts/avalon_lib_build_engine.TEENSY_MICROMOD
-	url = git@github.com:Blackaddr/avalon_app_build_engine.teensy_micromod.git
