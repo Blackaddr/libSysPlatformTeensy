@@ -100,7 +100,7 @@ FLASHMEM void AudioStream::initialize_memory(audio_block_float32_t *data, unsign
 	}
 
 	AudioMemoryUsageMaxReset();
-#if 0 // disable timer support. For Multiverse, we will always use i2sIn interrupt timing.
+#if 0 // disable timer support. For STRIDE, we will always use i2sIn interrupt timing.
 	if (update_scheduled == false) {
 		// if no hardware I/O has taken responsibility for update,
 		// start a timer which will call update_all() at the correct rate

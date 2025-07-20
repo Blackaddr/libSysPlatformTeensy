@@ -26,7 +26,7 @@ SysSpi::_impl::_impl(bool useDma)
     AVALON_SPI1_MISO_PIN,
     AVALON_SPI1_MOSI_PIN,
     AVALON_SPI1_MEM_SIZE,
-    0,  // no boundaries on Multiverse SPI PSRAM chip
+    0,  // no boundaries on STRIDE SPI PSRAM chip
     AVALON_SPI1_SPEED_HZ),
     m_useDma(useDma) {}
 
@@ -78,7 +78,7 @@ void SysSpi::_impl::begin()
     digitalWrite(m_csPin, HIGH);
 
     if (m_useDma) {
-        m_cs = new ActiveLowChipSelect1(m_spiConfig.csPin, m_settings);  // Multiverse uses SPI1
+        m_cs = new ActiveLowChipSelect1(m_spiConfig.csPin, m_settings);  // STRIDE uses SPI1
 
         // add 4 bytes to buffer for SPI CMD and 3 bytes of address
         m_txCommandBuffer = new uint8_t[CMD_ADDRESS_SIZE];
@@ -86,7 +86,7 @@ void SysSpi::_impl::begin()
         m_txTransfer = new DmaSpi::Transfer[2];
         m_rxTransfer = new DmaSpi::Transfer[2];
 
-        m_spiDma = new DmaSpiGeneric(1);  // Multiverse uses SPI1
+        m_spiDma = new DmaSpiGeneric(1);  // STRIDE uses SPI1
 
         m_spiDma->begin();
         m_spiDma->start();
